@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - <%= data %>
+    </title>
+</head>
+
+<body>
+
+    <%- include("../partials/nav.ejs") %>
+
+        <h1>Home</h1>
+        <p>This is the home page</p>
+
+        <div>
+            <% blogs.forEach(blog=> { %>
+                <h3>
+                    <%= blog.title %>
+                </h3>
+                <p>
+                    <%= blog.snippet %>
+                </p>
+                <% }) %>
+        </div>
+
+        <%- include("../partials/footer.ejs")%>
+</body>
+
+</html>
